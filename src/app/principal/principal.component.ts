@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
+  peso: number | undefined;
+  altura: number | undefined;
+  
   constructor() { }
 
   ngOnInit() {
