@@ -1,36 +1,37 @@
 <br>
 <div class="text-3xl font-medium text-3000 mb-3 font-bold">O que é o IMC?</div>
-<div class="font-medium text-1000 mb-3 field col-12 md:col-3">Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.</div>
-<div class="font-medium text-1000 mb-3 field col-12 md:col-3">O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</div>
-<div class="font-medium text-1000 mb-3 field col-12 md:col-3">Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo:</div>
+<div class="font-medium text-1000 mb-3 field p-col-12 p-md-6 p-lg-3">Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.</div>
+<div class="font-medium text-1000 mb-3 field p-col-12 p-md-6 p-lg-3">O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</div>
+<div class="font-medium text-1000 mb-3 field p-col-12 p-md-6 p-lg-3">Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo:</div>
 
-<div class="field col-12 md:col-3">
+<div class="field p-col-12 p-md-6 p-lg-3">
+    <strong>Altura</strong>
     <span class="p-float-label">
-        <p-inputNumber inputId="altura" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="2"></p-inputNumber>
-        <label for="altura">Altura</label>
-    </span>
-</div>
-<div class="field col-12 md:col-3">
-    <span class="p-float-label">
-        <p-inputNumber inputId="peso" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="2"></p-inputNumber>
-        <label for="peso">Peso</label>
+        <p-inputMask  placeholder="Ex: 1,85"></p-inputMask>
     </span>
 </div>
 
-<div class="field col-12 md:col-3">
+<div class="field p-col-12 p-md-6 p-lg-3">
+    <strong>Peso</strong>
+    <span class="p-float-label">
+        <p-inputMask  placeholder="Ex: 78,60"></p-inputMask>
+    </span>
+</div>
+
+<div class="field p-col-12 p-md-6 p-lg-3">
     <span>
-    <p-button icon="pi pi-calculator" label="Calcular"></p-button>
+    <p-button type="submit" icon="pi pi-calculator" label="Calcular"></p-button>
     </span>
     <span class="field col-12 md:col-3">
     <p-button icon="pi pi-refresh" label="Resetar"></p-button>
     </span>
 </div>
 
-<div>
-<h1>Seu IMC: </h1>
+<div class="field col-12 md:col-3 font-bold block bg-blue-200">
+<h1><strong>SEU IMC:</strong></h1>
 </div>
 
-<div class="field col-12 md:col-3">
+<div class="field p-col-12 p-md-6 p-lg-3">
 <p-table responsiveLayout="scroll">
     <ng-template pTemplate="header">
         <tr>
