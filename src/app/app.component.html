@@ -62,12 +62,20 @@
   </form>
   <br />
   <div class="p-col-12 p-md-6 p-lg-3" *ngIf="result !== 0">
-    <h1>IMC:</h1>
-    <p>{{ result && result.imc }}</p>
-    <h2>Classificação:</h2>
-    <p>{{ result && result.classificacao }}</p>
-    <h2>Grau de Obesidade:</h2>
-    <p>{{ result && result.grauObesidade }}</p>
+    <h1 class="text-4xl">
+      <span class="font-bold">IMC: </span> {{ result && result.imc }}
+    </h1>
+    <p class="text-3xl"></p>
+    <h1 class="text-4xl">
+      <span class="font-bold">Classificação: </span>
+      {{ result && result.classificacao }}
+    </h1>
+    <p class="text-3xl"></p>
+    <h1 class="text-4xl">
+      <span class="font-bold">Grau de Obesidade: </span>
+      {{ result && result.grauObesidade }}
+    </h1>
+    <p class="text-3xl"></p>
   </div>
 </div>
 
