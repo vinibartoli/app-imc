@@ -1,2 +1,74 @@
 <app-navbar></app-navbar>
-<app-principal></app-principal>
+<div class="p-grid p-fluid">
+  <br />
+  <div class="text-3xl font-medium text-3000 mb-3 font-bold">
+    O que é o IMC?
+  </div>
+  <div class="font-medium text-1000 mb-3 p-col-12 p-md-6 p-lg-3">
+    Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa
+    Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir
+    se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado
+    ou se está abaixo ou acima do peso.
+  </div>
+  <div class="font-medium text-1000 mb-3 p-col-12 p-md-6 p-lg-3">
+    O índice é calculado da seguinte maneira: divide-se o peso do paciente pela
+    sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal
+    quando o resultado do IMC está entre 18,5 e 24,9.
+  </div>
+  <div class="font-medium text-1000 mb-3 p-col-12 p-md-6 p-lg-3">
+    Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo:
+  </div>
+
+  <form class="p-col-12 p-md-6 p-lg-3" #f="ngForm" (ngSubmit)="onsubmit(f)">
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <strong>Altura</strong>
+      <span class="p-float-label">
+        <p-inputMask
+          name="altura"
+          [(ngModel)]="model.altura"
+          mask="9,99"
+          placeholder="Insira sua altura"
+        ></p-inputMask>
+      </span>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <strong>Peso</strong>
+      <span class="p-float-label">
+        <input
+          pInputText
+          type="tel"
+          name="peso"
+          placeholder="Digita seu Peso"
+          [(ngModel)]="model.peso"
+          #peso="ngModel"
+          required
+        />
+      </span>
+    </div>
+
+    <br />
+
+    <div class="p-col-12 p-md-6 p-lg-3">
+      <span class="p-col-12 p-md-6 p-lg-3">
+        <p-button
+          type="submit"
+          icon="pi pi-calculator"
+          label="Calcular"
+          styleClass="bg-yellow-600 text-black-100"
+        ></p-button>
+      </span>
+    </div>
+  </form>
+  <br />
+  <div class="p-col-12 p-md-6 p-lg-3" *ngIf="result !== 0">
+    <h1>IMC:</h1>
+    <p>{{ result && result.imc }}</p>
+    <h2>Classificação:</h2>
+    <p>{{ result && result.classificacao }}</p>
+    <h2>Grau de Obesidade:</h2>
+    <p>{{ result && result.grauObesidade }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>

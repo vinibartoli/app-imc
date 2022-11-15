@@ -4,7 +4,7 @@ import {InputMaskModule} from 'primeng/inputmask';
 import {ButtonModule} from 'primeng/button';
 import {FieldsetModule} from 'primeng/fieldset';
 import {TableModule} from 'primeng/table';
-
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
     exports: [
@@ -13,6 +13,7 @@ import {TableModule} from 'primeng/table';
         ButtonModule,
         FieldsetModule,
         TableModule,
+        InputTextModule
     ]
 })
 
